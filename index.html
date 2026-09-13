@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vidya Prabodhini | UPSC MPSC Banking</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    color:#17213b;
+    background:#fff;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(255,255,255,.95);
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logoCircle{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#ffe600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    font-weight:bold;
+    border:3px solid #fff;
+    box-shadow:0 2px 8px #bbb;
+}
+
+.logoText b{
+    display:block;
+    color:#07183d;
+    font-size:17px;
+}
+
+.logoText small{
+    color:#c28b00;
+    font-size:9px;
+    font-weight:bold;
+}
+
+nav a{
+    margin-left:22px;
+    text-decoration:none;
+    color:#17213b;
+    font-weight:bold;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#1754a6;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    padding:150px 7% 80px;
+    background:
+    radial-gradient(circle at 90% 20%,#ffe8a8,transparent 25%),
+    linear-gradient(135deg,#f7faff,#fff);
+}
+
+.heroContent{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    background:#fff1c9;
+    color:#866000;
+    padding:9px 16px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:clamp(45px,6vw,75px);
+    line-height:1.05;
+    color:#08183b;
+}
+
+.hero h1 span{
+    color:#1754a6;
+}
+
+.hero p{
+    margin:25px 0;
+    max-width:620px;
+    color:#667085;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 22px;
+    border-radius:9px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.primary{
+    background:#08183b;
+    color:white;
+}
+
+.secondary{
+    background:white;
+    color:#08183b;
+    border:1px solid #ddd;
+}
+
+/* HERO CARD */
+
+.heroCard{
+    background:#08183b;
+    color:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 25px 60px rgba(8,24,59,.25);
+}
+
+.heroCard h2{
+    font-family:Georgia,serif;
+    font-size:32px;
+    margin:10px 0 25px;
+}
+
+.courseMini{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:17px 0;
+    border-top:1px solid rgba(255,255,255,.15);
+}
+
+.number{
+    width:42px;
+    height:42px;
+    border-radius:10px;
+    background:#17335f;
+    display:grid;
+    place-items:center;
+    color:#ffd45a;
+    font-weight:bold;
+}
+
+/* STATS */
+
+.stats{
+    max-width:1100px;
+    margin:-40px auto 0;
+    position:relative;
+    padding:0 20px;
+}
+
+.statsBox{
+    background:white;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    padding:28px;
+}
+
+.stat{
+    text-align:center;
+    border-right:1px solid #eee;
+}
+
+.stat:last-child{
+    border:none;
+}
+
+.stat b{
+    display:block;
+    font-size:24px;
+    color:#08183b;
+}
+
+.stat span{
+    color:#777;
+    font-size:12px;
+}
+
+/* GENERAL */
+
+section{
+    padding:95px 7%;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.heading{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 45px;
+}
+
+.heading small{
+    color:#1754a6;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.heading h2{
+    font-family:Georgia,serif;
+    font-size:42px;
+    color:#08183b;
+    margin:10px 0;
+}
+
+.heading p{
+    color:#667085;
+}
+
+/* COURSES */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    padding:32px;
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+    transition:.3s;
+    background:white;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 20px 40px rgba(0,0,0,.1);
+}
+
+.card small{
+    color:#b07c00;
+    font-weight:bold;
+}
+
+.card h3{
+    font-size:23px;
+    margin:12px 0;
+    color:#08183b;
+}
+
+.card p{
+    color:#667085;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.card a{
+    display:inline-block;
+    margin-top:20px;
+    color:#1754a6;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+/* ABOUT */
+
+.about{
+    background:#f7f9fc;
+}
+
+.aboutGrid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.aboutBox{
+    background:#08183b;
+    color:white;
+    border-radius:25px;
+    padding:50px;
+    min-height:400px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.aboutBox .big{
+    font-size:60px;
+    color:#ffd45a;
+    font-weight:bold;
+}
+
+.aboutBox h2{
+    font-family:Georgia,serif;
+    font-size:35px;
+    margin:10px 0;
+}
+
+.aboutText h2{
+    font-family:Georgia,serif;
+    color:#08183b;
+    font-size:40px;
+    margin:10px 0 20px;
+}
+
+.aboutText p{
+    color:#667085;
+    line-height:1.8;
+}
+
+.features{
+    margin-top:25px;
+}
+
+.feature{
+    display:flex;
+    gap:15px;
+    margin:20px 0;
+}
+
+.check{
+    width:40px;
+    height:40px;
+    background:#e9f1ff;
+    color:#1754a6;
+    border-radius:10px;
+    display:grid;
+    place-items:center;
+    font-weight:bold;
+}
+
+/* RESULTS */
+
+.results{
+    background:#08183b;
+    color:white;
+}
+
+.results .heading h2{
+    color:white;
+}
+
+.results .heading p{
+    color:#cbd5e1;
+}
+
+.resultGrid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.result{
+    padding:35px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:18px;
+}
+
+.result b{
+    display:block;
+    color:#ffd45a;
+    font-size:42px;
+}
+
+.result span{
+    color:#cbd5e1;
+}
+
+/* SCHOLARSHIP */
+
+.scholar{
+    background:#fff8e7;
+}
+
+.scholarBox{
+    border:1px solid #ecdcae;
+    border-radius:22px;
+    padding:45px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.scholarBox h2{
+    font-family:Georgia,serif;
+    font-size:38px;
+    color:#08183b;
+}
+
+.scholarBox p{
+    color:#667085;
+    margin-top:10px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#f7f9fc;
+}
+
+.contactGrid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:25px;
+}
+
+.contactBox{
+    background:white;
+    padding:32px;
+    border-radius:18px;
+    border:1px solid #e5e7eb;
+}
+
+.contactBox h3{
+    color:#08183b;
+    margin-bottom:20px;
+}
+
+.info{
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+}
+
+.info small{
+    display:block;
+    color:#777;
+}
+
+.info b{
+    color:#08183b;
+}
+
+form{
+    display:grid;
+    gap:14px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:14px;
+    outline:none;
+}
+
+textarea{
+    min-height:120px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#050f25;
+    color:white;
+    padding:45px 7% 20px;
+}
+
+.footerGrid{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+footer p,footer a{
+    color:#aeb9c9;
+    font-size:14px;
+}
+
+footer a{
+    display:block;
+    margin:8px 0;
+    text-decoration:none;
+}
+
+.copy{
+    max-width:1150px;
+    margin:30px auto 0;
+    padding-top:20px;
+    border-top:1px solid #1e2b42;
+    text-align:center;
+    color:#718096;
+    font-size:12px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero{
+        padding-top:125px;
+    }
+
+    .heroContent,
+    .aboutGrid,
+    .contactGrid{
+        grid-template-columns:1fr;
+    }
+
+    .cards,
+    .resultGrid{
+        grid-template-columns:1fr;
+    }
+
+    .statsBox{
+        grid-template-columns:1fr 1fr;
+        gap:20px;
+    }
+
+    .stat:nth-child(2){
+        border:none;
+    }
+
+    .scholarBox{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .footerGrid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    section{
+        padding:70px 5%;
+    }
+
+    .hero{
+        padding-left:5%;
+        padding-right:5%;
+    }
+
+    .heroCard{
+        padding:25px;
+    }
+
+    .stats{
+        padding:0 10px;
+    }
+
+    .statsBox{
+        padding:20px 5px;
+    }
+
+    .stat b{
+        font-size:19px;
+    }
+
+    .heading h2{
+        font-size:32px;
+    }
+
+    .scholarBox{
+        padding:30px;
+    }
+
+    .scholarBox h2{
+        font-size:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+
+<div class="logo">
+<div class="logoCircle">VP</div>
+<div class="logoText">
+<b>Vidya Prabodhini</b>
+<small>UPSC • MPSC • BANKING</small>
+</div>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#courses">Courses</a>
+<a href="#about">About</a>
+<a href="#results">Results</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="menu">☰</div>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="heroContent">
+
+<div>
+
+<div class="badge">✦ COACHING & SCHOLARSHIPS</div>
+
+<h1>
+Prepare Today.<br>
+<span>Lead Tomorrow.</span>
+</h1>
+
+<p>
+Focused preparation and expert guidance for UPSC, MPSC and Banking aspirants.
+Build the right strategy, stay consistent and move closer to your goal.
+</p>
+
+<div class="buttons">
+<a href="#contact" class="btn primary">
+Admission Enquiry →
+</a>
+
+<a href="#courses" class="btn secondary">
+Explore Courses
+</a>
+</div>
+
+</div>
+
+
+<div class="heroCard">
+
+<small>YOUR CAREER • YOUR PREPARATION</small>
+
+<h2>Choose Your Path</h2>
+
+<div class="courseMini">
+<div class="number">01</div>
+<div>
+<b>UPSC Civil Services</b><br>
+<small>Focused preparation & guidance</small>
+</div>
+</div>
+
+<div class="courseMini">
+<div class="number">02</div>
+<div>
+<b>MPSC</b><br>
+<small>State service examination preparation</small>
+</div>
+</div>
+
+<div class="courseMini">
+<div class="number">03</div>
+<div>
+<b>Banking Exams</b><br>
+<small>Exam-oriented preparation</small>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="statsBox">
+
+<div class="stat">
+<b>UPSC</b>
+<span>Civil Services</span>
+</div>
+
+<div class="stat">
+<b>MPSC</b>
+<span>State Services</span>
+</div>
+
+<div class="stat">
+<b>BANKING</b>
+<span>Competitive Exams</span>
+</div>
+
+<div class="stat">
+<b>2026</b>
+<span>Latest Updates</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- COURSES -->
+
+<section id="courses">
+
+<div class="container">
+
+<div class="heading">
+
+<small>OUR PROGRAMS</small>
+
+<h2>
+Preparation Built Around Your Goal
+</h2>
+
+<p>
+Choose a focused program and prepare with a structured approach.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<small>01 / UPSC</small>
+
+<h3>UPSC Civil Services</h3>
+
+<p>
+Comprehensive guidance for aspirants preparing for Civil Services examinations.
+</p>
+
+<a href="#contact">
+Get Course Details →
+</a>
+
+</div>
+
+
+<div class="card">
+
+<small>02 / MPSC</small>
+
+<h3>MPSC State Services</h3>
+
+<p>
+Focused preparation for Maharashtra competitive examinations with guided practice.
+</p>
+
+<a href="#contact">
+Get Course Details →
+</a>
+
+</div>
+
+
+<div class="card">
+
+<small>03 / BANKING</small>
+
+<h3>Banking Exams</h3>
+
+<p>
+Exam-oriented preparation, practice and revision support for banking aspirants.
+</p>
+
+<a href="#contact">
+Get Course Details →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="aboutGrid">
+
+<div class="aboutBox">
+
+<div class="big">VP</div>
+
+<h2>
+Vidya Prabodhini
+</h2>
+
+<p>
+Coaching & Scholarships
+</p>
+
+<br>
+
+<p>
+पाया उज्ज्वल भविष्याचा..
+</p>
+
+</div>
+
+
+<div class="aboutText">
+
+<small style="color:#1754a6;font-weight:bold;letter-spacing:2px;">
+WHY CHOOSE US
+</small>
+
+<h2>
+More Than Just Classes.
+</h2>
+
+<p>
+A focused learning environment designed to help aspirants stay consistent,
+practice regularly and prepare with the right strategy.
+</p>
+
+
+<div class="features">
+
+<div class="feature">
+
+<div class="check">✓</div>
+
+<div>
+<b>Expert Guidance</b>
+<p>Learn with experienced educators and mentors.</p>
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="check">✓</div>
+
+<div>
+<b>Regular Practice</b>
+<p>Improve your preparation through consistent practice.</p>
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="check">✓</div>
+
+<div>
+<b>Student Focused</b>
+<p>Structured support throughout your preparation.</p>
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="check">✓</div>
+
+<div>
+<b>Scholarship Opportunities</b>
+<p>Explore available scholarship programs.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESULTS -->
+
+<section class="results" id="results">
+
+<div class="container">
+
+<div class="heading">
+
+<small>RESULTS & ACHIEVEMENTS</small>
+
+<h2>
+Achievements That Inspire
+</h2>
+
+<p>
+A dedicated section for verified selections, ranks and institute achievements.
+</p>
+
+</div>
+
+
+<div class="resultGrid">
+
+<div class="result">
+<b>2026</b>
+<span>Latest Result Highlights</span>
+</div>
+
+<div class="result">
+<b>UPSC</b>
+<span>CSE Preparation</span>
+</div>
+
+<div class="result">
+<b>MPSC</b>
+<span>State Service Guidance</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SCHOLARSHIP -->
+
+<section class="scholar">
+
+<div class="container">
+
+<div class="scholarBox">
+
+<div>
+
+<small style="color:#a57900;font-weight:bold;">
+SCHOLARSHIPS
+</small>
+
+<h2>
+Make Your Preparation<br>
+More Accessible.
+</h2>
+
+<p>
+Check eligibility and available scholarship opportunities.
+</p>
+
+</div>
+
+<a href="#contact" class="btn primary">
+Scholarship Enquiry →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="heading">
+
+<small>CONTACT US</small>
+
+<h2>
+Admission Enquiry
+</h2>
+
+<p>
+Fill your details and our team can get back to you.
+</p>
+
+</div>
+
+
+<div class="contactGrid">
+
+
+<div class="contactBox">
+
+<h3>Vidya Prabodhini</h3>
+
+<div class="info">
+<small>Address</small>
+<b>
+Opp. Shahaji Law College,<br>
+4th Lane, Shahupuri,<br>
+Kolhapur 416001
+</b>
+</div>
+
+<div class="info">
+<small>Programs</small>
+<b>UPSC • MPSC • BANKING</b>
+</div>
+
+<div class="info">
+<small>Website</small>
+<b>vidyaprabodhini.in</b>
+</div>
+
+</div>
+
+
+<div class="contactBox">
+
+<h3>Send Your Enquiry</h3>
+
+<form onsubmit="sendMessage(event)">
+
+<input
+type="text"
+placeholder="Full Name"
+required
+>
+
+<input
+type="tel"
+placeholder="Mobile Number"
+required
+>
+
+<select required>
+
+<option value="">
+Select Course
+</option>
+
+<option>UPSC</option>
+<option>MPSC</option>
+<option>Banking</option>
+
+</select>
+
+<textarea
+placeholder="Your Message">
+</textarea>
+
+<button class="btn primary">
+Submit Enquiry →
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footerGrid">
+
+<div>
+
+<h3>Vidya Prabodhini</h3>
+
+<p>
+Coaching & Scholarships for UPSC,
+MPSC and Banking aspirants.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="#home">Home</a>
+<a href="#courses">Courses</a>
+<a href="#about">About</a>
+<a href="#results">Results</a>
+
+</div>
+
+
+<div>
+
+<h3>Programs</h3>
+
+<a href="#courses">UPSC</a>
+<a href="#courses">MPSC</a>
+<a href="#courses">Banking</a>
+<a href="#contact">Scholarships</a>
+
+</div>
+
+</div>
+
+
+<div class="copy">
+© 2026 Vidya Prabodhini • Demo Website
+</div>
+
+</footer>
+
+
+<script>
+
+function sendMessage(event){
+
+event.preventDefault();
+
+alert(
+"Thank you! Your enquiry has been received."
+);
+
+}
+
+</script>
+
+</body>
+</html>
